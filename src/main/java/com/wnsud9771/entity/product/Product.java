@@ -1,4 +1,4 @@
-package com.wnsud9771.entity;
+package com.wnsud9771.entity.product;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

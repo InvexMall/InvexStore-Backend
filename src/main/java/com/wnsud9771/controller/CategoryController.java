@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.wnsud9771.dto.MainCategoryList;
 import com.wnsud9771.dto.ProductDTO;
-import com.wnsud9771.service.product.ProductService;
+import com.wnsud9771.service.product.CategoryService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
@@ -16,17 +17,17 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/products")
+@RequestMapping("/api/categorys")
 @Slf4j
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-public class ProductController {
+public class CategoryController {
+	private final CategoryService categoryService;
 	
-	private final ProductService productService;
-	
-	@Operation(summary = "캠페인 관리화면 전체 조회", description = "전체 아이템 목록을 조회합니다.")
-	@GetMapping("/all")
-	public List<ProductDTO> getallProducts() {
-		return productService.getallProducts();
+	@Operation(summary = "메인 카테고리 이름들 조회", description = "")
+	@GetMapping("/allmaincategory")
+	public List<MainCategoryList> getallMainCategorys() {
+		return categoryService.searchMainCategoryList();
 	}
+	
 	
 }
