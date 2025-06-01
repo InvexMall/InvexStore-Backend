@@ -1,4 +1,4 @@
-package com.wnsud9771.service;
+package com.wnsud9771.service.product;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 import com.wnsud9771.dto.ProductDTO;
-import com.wnsud9771.entity.Product;
+import com.wnsud9771.entity.product.Product;
 import com.wnsud9771.repository.ProductRepository;
 
 import lombok.RequiredArgsConstructor;
